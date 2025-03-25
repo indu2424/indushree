@@ -1,0 +1,149 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indu Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            color: #333;
+        }
+        h1, h2 {
+            color: #1e3c72;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 15px;
+            background: rgba(240, 240, 240, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .about img {
+            max-width: 120px;
+            border-radius: 10px;
+        }
+        .skills-chart {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .contact-icons a {
+            margin: 10px;
+            font-size: 24px;
+            color: #1e3c72;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Indu Portfolio</h1>
+        
+        <div class="section about">
+            <div>
+                <h2>About Me</h2>
+                <p>I am a passionate and dedicated Master's student in Cybersecurity with a strong foundation in Forensic Science and Computer Science.</p>
+            </div>
+            <img src="my pic.jpg" alt="Indu Shree">
+        </div>
+
+        <div class="section">
+            <h2>Education & Certifications</h2>
+            <p>Master’s in Cyber Security (2023) - Amity University, Bangalore, Karnataka</p>
+            <p>Bachelor’s in Computer Science, Forensics & Chemistry (2021) - RBVRR Women’s College, Hyderabad</p>
+        </div>
+
+        <div class="section">
+            <h2>Skills & Proficiencies</h2>
+            <ul>
+                <li>Cyber Security</li>
+                <li>Forensic Science</li>
+                <li>Ethical Hacking</li>
+                <li>Network Security</li>
+                <li>Programming Languages: HTML, Python, CSS, Linux</li>
+                <li>Languages: Telugu, Hindi, English</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Project Work</h2>
+            <p>Scanned vulnerabilities and determined the strengths and weaknesses of security measures in a Nutritional Application.</p>
+            <p><strong>Academy:</strong> Data Space Academy</p>
+        </div>
+
+        <div class="section">
+            <h2>Skills Chart</h2>
+            <div class="skills-chart">
+                <canvas id="skillsChart" width="300" height="300"></canvas>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>My CV</h2>
+            <p>You can download my CV by clicking the link below.</p>
+            <a href="#">Download My CV</a>
+        </div>
+
+        <div class="section contact-icons">
+            <h2>Contact Information</h2>
+            <p>Name: Giduturi Indu Shree</p>
+            <p>Email: <a href="mailto:indushreegiduturi@gmail.com">indushreegiduturi@gmail.com</a></p>
+            <p>Phone: <a href="tel:+918309477573">+91 8309477573</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/indu-shree-giduturi-91404430a" target="_blank">LinkedIn Profile</a></p>
+        </div>
+    </div>
+
+    <script>
+        var ctx = document.getElementById('skillsChart').getContext('2d');
+        var skillsChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Cyber Security', 'Forensic Science', 'Ethical Hacking', 'Network Security', 'Python', 'Linux'],
+                datasets: [{
+                    data: [30, 20, 15, 15, 10, 10],
+                    backgroundColor: ['#1e3c72', '#2a5298', '#3b5998', '#4c669f', '#5d7cb0', '#6e8fc1'],
+                    borderColor: ['#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff'],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#333',
+                            font: {
+                                size: 14
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
